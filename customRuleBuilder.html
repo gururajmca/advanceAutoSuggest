@@ -1,0 +1,19 @@
+<div id="custom-rule-builder">
+    <div class="sa-wrapper">
+      <div class="fakeArea" ng-bind-html="ruleCodeFake">
+      </div>
+      <textarea class="realArea" ng-model="ruleCode" style="width:100%;">{{ruleCode}}</textarea>
+    </div>
+    <div class="auto-suggest-container">
+        <div class="context-highlight">
+          <ul>
+              <li ng-repeat="context in context_tabs" ng-class="{current: context.selected === true}"> &lt; {{context.text}} &gt; </li>
+          </ul>
+        </div>
+        <div class="auto-suggest-list" ng-show="isShowDropSuggestion">
+          <ul>
+            <li ng-repeat="suggestion in autoCompleteList" ng-click="addSuggestionToQuery(suggestion)">{{suggestion.tagname}}</li>
+          </u>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Text Area example</title>
+    <link rel="stylesheet" href="ruleBuilder.css">
+    <script src="../libs/jquery.min.js"></script>
+    <script src="../libs/angular.min.js"></script>
+    <script src="../libs/angular-sanitize.js"></script>
+    <script src="index.js"></script>
+    <script src="customRuleBuilder.js"></script>
+  </head>
+  <body>
+      <div ng-controller="myController">
+        <h2>{{example}}</h2>
+        <custom-rule-builder text-placeholder="'Sample Custom Rule Builder Query'" rule-code="ruleCode" text-area="" fake-area-element=""></custom-rule-builder>
+      </div>
+  </body>
+</html>
